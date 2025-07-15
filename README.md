@@ -28,20 +28,20 @@ This project applies a neural network model to classify ECG data as **normal** o
 ---
 
 # 📁 Folder Structure
-cardiac-arrhythmia-prediction/
-├── data/
-│   ├── ptbdb_normal.csv
-│   ├── ptbdb_abnormal.csv
-│   └── patient_1.csv (1-5)
-├── results/
-│   ├── loss_curve.png
-│   └── confusion_matrix.png
-│   └── weights.weights.h5
-│   └── training_log.csv
-├── notebooks/
-│   ├── arrhythmia_prediction.ipynb
-├── README.md
-└── requirements.txt
+cardiac-arrhythmia-prediction/  
+├── data/  
+│   ├── ptbdb_normal.csv (Obtained from Kaggle)    
+│   ├── ptbdb_abnormal.csv (Obtained from Kaggle)  
+│   └── patient_1.csv (1-5)  
+├── results/  
+│   ├── loss_curve.png  
+│   └── confusion_matrix.png  
+│   └── weights.weights.h5  
+│   └── training_log.csv  
+├── notebooks/  
+│   ├── arrhythmia_prediction.ipynb  
+├── README.md  
+└── requirements.txt  
 
 ## 📊 Model Summary
 
@@ -56,3 +56,6 @@ model = Sequential([
     Dense(2, activation='softmax')  # Binary classification
 ])
 ```
+
+## Kaggle Dataset
+[https://www.kaggle.com/datasets/shayanfazeli/heartbeat](Dataset)
