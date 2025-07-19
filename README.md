@@ -49,13 +49,34 @@ The model is a fully connected neural network:
 
 ```python
 model = Sequential([
-    Dense(10, activation='relu', input_shape=(input_dim,)),
+    Input(shape=(X_train.shape[1],)),
     Dense(10, activation='relu'),
     Dense(10, activation='relu'),
-    Dense(10, activation='relu')
-    Dense(2, activation='softmax')  # Binary classification
+    Dense(10, activation='relu'),
+    Dense(10, activation='relu'),
+    Dense(10, activation='relu'),
+    Dense(2, activation='softmax')
 ])
 ```
 
 ## Kaggle Dataset
+
 [Dataset](https://www.kaggle.com/datasets/shayanfazeli/heartbeat)
+
+## Results obtained
+
+### 📉 Training Loss Curve
+![Loss Curve](results/loss_curve.png)
+The graph shows that the training and validation loss decrease rapidly during the first few epochs, and stabilize near zero. This indicates good convergence with no clear evidence of overfitting.
+
+### 📊 Confusion Matrix
+![Confusion Matrix](results/confusion_matrix.png)
+The matrix shows excellent model accuracy in distinguishing between normal and abnormal recordings.
+- True positives: **2077**
+- True negatives: **832**
+- False positives: **2**
+- False negatives: **0**
+
+This behavior suggests that the model has a high **sensitivity (recall)** to detect arrhythmias, something crucial in medical applications.
+
+**Overall Accuracy:** 99.93%
