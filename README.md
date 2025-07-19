@@ -58,4 +58,4 @@ model = Sequential([
 ```
 
 ## Kaggle Dataset
-[https://www.kaggle.com/datasets/shayanfazeli/heartbeat](Dataset)
+[Dataset](https://www.kaggle.com/datasets/shayanfazeli/heartbeat)
